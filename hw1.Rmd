@@ -1,0 +1,31 @@
+---
+title: "hw1"
+author: "심주현"
+date: "2016년 9월 8일"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 과제 1
+
+Ozone ~ wind simple linear regression
+
+```{r}
+x1 <- airquality$Wind
+y1 <- airquality$Ozone
+linreg <- lm(formula = y1 ~ x1)
+linreg
+```
+
+---
+
+###plot
+
+```{r, echo=FALSE}
+plot(x = x1, y = y1)
+abline(linreg, col="red")
+```
+
